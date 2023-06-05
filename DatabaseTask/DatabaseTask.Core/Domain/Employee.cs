@@ -7,8 +7,26 @@ namespace DatabaseTask.Core.Domain
     {
         [Key]
         public Guid Id { get; set; }
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
+        public int EmployeeNumber { get; set; }
+        public string ContractNumber { get; set; }
+        public DateTime EmploymentRelationshipStartDate { get; set; }
+        public Boolean EmploymentRelationshipValid { get; set; }
+        public DateTime EmploymentRelationshipEndDate { get; set; }
+        public int EmploymentNumber { get; set; } = 0;
+        public string? EmploymentEmail { get; set; }
+        public string AccountNumber { get; set; }
+        public int TaxfreeSum { get; set; }
+
+        public Person Person { get; set; }
+        public ICollection<Child> Childrens { get; set; }
+        public ICollection<EmployeeOccupation> EmployeeOccupations { get; set; }
+        public ICollection<EmployeeAccess> EmployeeAccesses { get; set; }
+        public ICollection<DepartmentEmployee> DepartmentEmployees { get; set; }
+        public ICollection<Training> Training { get; set; }
+        public ICollection<Vacation> Vacations { get; set; }
+        public ICollection<SickLeave> SickLeaves { get; set; }
+        public ICollection<Salary> Salaries { get; set; }
+        public ICollection<Rent> Rents { get; set; }
 
         /// ESIMENE HINDELINE HARJUTUS
         /// Nõuded ja tegevus:
